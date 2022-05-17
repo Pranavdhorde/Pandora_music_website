@@ -2,7 +2,7 @@ console.log("Welcome to Spotify");
 
 // Initialize the Variables
 let songIndex = 0;
-let audioElement = new Audio('Driving thru/1.mp3');
+let audioElement = new Audio('songs/Driving thru/1.mp3');
 let masterPlay = document.getElementById('masterPlay');
 let myProgressBar = document.getElementById('myProgressBar');
 let gif = document.getElementById('gif');
@@ -10,16 +10,16 @@ let masterSongName = document.getElementById('masterSongName');
 let songItems = Array.from(document.getElementsByClassName('songItem'));
 
 let songs = [
-    {songName: "Love_The_Way_You_Lie", filePath: "Driving thru/1.mp3", coverPath: "covers/11.jpg"},
-    {songName: "Let-Me-Down-Slowly", filePath: "Driving thru/2.mp3", coverPath: "covers/12.jpg"},
-    {songName: "lovely", filePath: "Driving thru/3.mp3", coverPath: "covers/13.jpg"},
-    {songName: "We_Don_t_Talk_Anymore", filePath: "Driving thru/4.mp3", coverPath: "covers/14.jpg"},
-    {songName: "Thank You", filePath: "Driving thru/5.mp3", coverPath: "covers/15.jpg"},
-    {songName: "Middle ft. Bipolar Sunshine", filePath: "Driving thru/6.mp3", coverPath: "covers/16.jpg"},
-    {songName: "Drink Before the War", filePath: "Driving thru/7.mp3", coverPath: "covers/17.jpeg"},
-    {songName: "Loving You Is A Losing Game", filePath: "Driving thru/8.mp3", coverPath: "covers/18.jpeg"},
-    {songName: "Gotye_Somebody_That_I_Used_To_Know_feat_Kimbra", filePath: "Driving thru/9.mp3", coverPath: "covers/19.jpg"},
-    {songName: "Lana Del Rey - Summertime Sadness", filePath: "Driving thru/10.mp3", coverPath: "covers/20.jpg"},
+    {songName: "Love_The_Way_You_Lie", filePath: "songs/Driving thru/1.mp3", coverPath: "covers/11.jpg"},
+    {songName: "Let-Me-Down-Slowly", filePath: "songs/Driving thru/2.mp3", coverPath: "covers/12.jpg"},
+    {songName: "lovely", filePath: "songs/Driving thru/3.mp3", coverPath: "covers/13.jpg"},
+    {songName: "We_Don_t_Talk_Anymore", filePath: "songs/Driving thru/4.mp3", coverPath: "covers/14.jpg"},
+    {songName: "Thank You", filePath: "songs/Driving thru/5.mp3", coverPath: "covers/15.jpg"},
+    {songName: "Middle ft. Bipolar Sunshine", filePath: "songs/Driving thru/6.mp3", coverPath: "covers/16.jpg"},
+    {songName: "Drink Before the War", filePath: "songs/Driving thru/7.mp3", coverPath: "covers/17.jpeg"},
+    {songName: "Loving You Is A Losing Game", filePath: "songs/Driving thru/8.mp3", coverPath: "covers/18.jpeg"},
+    {songName: "Gotye_Somebody_That_I_Used_To_Know_feat_Kimbra", filePath: "songs/Driving thru/9.mp3", coverPath: "covers/19.jpg"},
+    {songName: "Lana Del Rey - Summertime Sadness", filePath: "songs/Driving thru/10.mp3", coverPath: "covers/20.jpg"},
 ]
 
 songItems.forEach((element, i)=>{ 
@@ -67,7 +67,7 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
         songIndex = parseInt(e.target.id);
         e.target.classList.remove('fa-play-circle');
         e.target.classList.add('fa-pause-circle');
-        audioElement.src = `Driving thru/${songIndex+1}.mp3`;
+        audioElement.src = `songs/Driving thru/${songIndex+1}.mp3`;
         masterSongName.innerText = songs[songIndex].songName;
         audioElement.currentTime = 0;
         audioElement.play();
@@ -84,7 +84,7 @@ document.getElementById('next').addEventListener('click', ()=>{
     else{
         songIndex += 1;
     }
-    audioElement.src = `Driving thru/${songIndex+1}.mp3`;
+    audioElement.src = `songs/Driving thru/${songIndex+1}.mp3`;
     masterSongName.innerText = songs[songIndex].songName;
     audioElement.currentTime = 0;
     audioElement.play();
@@ -100,7 +100,7 @@ document.getElementById('previous').addEventListener('click', ()=>{
     else{
         songIndex -= 1;
     }
-    audioElement.src = `Driving thru/${songIndex+1}.mp3`;
+    audioElement.src = `songs/Driving thru/${songIndex+1}.mp3`;
     masterSongName.innerText = songs[songIndex].songName;
     audioElement.currentTime = 0;
     audioElement.play();

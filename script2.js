@@ -2,7 +2,7 @@ console.log("Welcome to Spotify");
 
 // Initialize the Variables
 let songIndex = 0;
-let audioElement = new Audio('songs1/1.mp3');
+let audioElement = new Audio('songs/songs1/1.mp3');
 let masterPlay = document.getElementById('masterPlay');
 let myProgressBar = document.getElementById('myProgressBar');
 let gif = document.getElementById('gif');
@@ -10,16 +10,16 @@ let masterSongName = document.getElementById('masterSongName');
 let songItems = Array.from(document.getElementsByClassName('songItem'));
 
 let songs = [
-    {songName: "Stay", filePath: "songs1/1.mp3", coverPath: "covers/11.jpg"},
-    {songName: "Butter", filePath: "songs1/2.mp3", coverPath: "covers/12.jpg"},
-    {songName: "Bad-Habits", filePath: "songs1/3.mp3", coverPath: "covers/13.jpg"},
-    {songName: "Peaches", filePath: "songs1/4.mp3", coverPath: "covers/14.jpg"},
-    {songName: "Kiss-Me-More", filePath: "songs1/5.mp3", coverPath: "covers/15.jpg"},
-    {songName: "Jalebi Baby", filePath: "songs1/6.mp3", coverPath: "covers/16.jpg"},
-    {songName: "Save Your Tears", filePath: "songs1/7.mp3", coverPath: "covers/17.jpeg"},
-    {songName: "Permission-to-Dance", filePath: "songs1/8.mp3", coverPath: "covers/18.jpeg"},
-    {songName: "Anyone", filePath: "songs1/9.mp3", coverPath: "covers/19.jpg"},
-    {songName: "Willow", filePath: "songs1/10.mp3", coverPath: "covers/20.jpg"},
+    {songName: "Stay", filePath: "songs/songs1/1.mp3", coverPath: "covers/11.jpg"},
+    {songName: "Butter", filePath: "songs/songs1/2.mp3", coverPath: "covers/12.jpg"},
+    {songName: "Bad-Habits", filePath: "songs/songs1/3.mp3", coverPath: "covers/13.jpg"},
+    {songName: "Peaches", filePath: "songs/songs1/4.mp3", coverPath: "covers/14.jpg"},
+    {songName: "Kiss-Me-More", filePath: "songs/songs1/5.mp3", coverPath: "covers/15.jpg"},
+    {songName: "Jalebi Baby", filePath: "songs/songs1/6.mp3", coverPath: "covers/16.jpg"},
+    {songName: "Save Your Tears", filePath: "songs/songs1/7.mp3", coverPath: "covers/17.jpeg"},
+    {songName: "Permission-to-Dance", filePath: "songs/songs1/8.mp3", coverPath: "covers/18.jpeg"},
+    {songName: "Anyone", filePath: "songs/songs1/9.mp3", coverPath: "covers/19.jpg"},
+    {songName: "Willow", filePath: "songs/songs1/10.mp3", coverPath: "covers/20.jpg"},
 ]
 
 songItems.forEach((element, i)=>{ 
@@ -67,7 +67,7 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
         songIndex = parseInt(e.target.id);
         e.target.classList.remove('fa-play-circle');
         e.target.classList.add('fa-pause-circle');
-        audioElement.src = `songs1/${songIndex+1}.mp3`;
+        audioElement.src = `songs/songs1/${songIndex+1}.mp3`;
         masterSongName.innerText = songs[songIndex].songName;
         audioElement.currentTime = 0;
         audioElement.play();
@@ -84,7 +84,7 @@ document.getElementById('next').addEventListener('click', ()=>{
     else{
         songIndex += 1;
     }
-    audioElement.src = `songs1/${songIndex+1}.mp3`;
+    audioElement.src = `songs/songs1/${songIndex+1}.mp3`;
     masterSongName.innerText = songs[songIndex].songName;
     audioElement.currentTime = 0;
     audioElement.play();
@@ -100,7 +100,7 @@ document.getElementById('previous').addEventListener('click', ()=>{
     else{
         songIndex -= 1;
     }
-    audioElement.src = `songs1/${songIndex+1}.mp3`;
+    audioElement.src = `songs/songs1/${songIndex+1}.mp3`;
     masterSongName.innerText = songs[songIndex].songName;
     audioElement.currentTime = 0;
     audioElement.play();
