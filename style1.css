@@ -15,33 +15,117 @@ nav{
     font-family: 'Ubuntu', sans-serif;
 }
 
+nav{
+    display: flex;
+    height: 80px;
+    width: 100%;
+    background: #fdfdfd;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
 nav ul{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     list-style-type: none;
-    height: 65px;
-    background-color: black;
-    color: white;
 }
 
 nav ul li{
     padding: 0 12px;
 }
 
-nav ul li a:hover{
-    color: rgb(219, 14, 14);
-}
+nav ul li a{
+    color: #070707;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 800;
+    padding: 8px 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+  }
 
+nav ul li a:hover{
+    color: rgb(252, 252, 252);
+    background-color: rgb(7, 7, 7);
+}
+nav .menu-btn i{
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+}
+nav .menu-btn i{
+    color: rgb(10, 10, 10);
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+  }
+  i{
+    font-size: 15px;
+    margin-left: 10px;
+    margin-right: 1px;
+    margin-top: 3px;
+  }
+#click{
+    display: none;
+  }
+@media (max-width: 700px) {
+
+    nav .menu-btn i{
+        padding: 0px 50px;
+        display: block;
+      }
+    #click:checked ~ .menu-btn i:before{
+        content: "\f00d";
+      }
+      
+      nav ul{
+        position: fixed;
+        top: 80px;
+        left:-100%;
+        background: rgb(2, 2, 2);
+        height: 100vh;
+        width: 100%;
+        display: block;
+        text-align: center;
+        transition: all 0.3s ease;
+      }
+      #click:checked ~ ul{
+        left: 0;
+      }
+      
+      nav ul li{
+        margin: 40px 0px;
+    
+      }
+      nav ul li a{
+          color: #f2f2f2;
+       font-size: 20px;
+       display: block;
+      }
+      nav ul li a:hover,
+      nav ul li a.active{
+        color: rgb(209, 19, 35);
+        background: none;
+      }
+
+}
 .brand img{
+    margin: -7px;
     width: 44px;
     padding: 0 8px;
 }
 
-.brand {
+ nav .brand {
     display: flex;
     align-items: center;
-    font-weight: bolder;
-    font-size: 1.3rem;
+    font-weight: 800;
+    font-size: 2.0rem;
+    color: rgb(241, 11, 11);
+    padding: 0px 30px;
 }
 
 .container{
@@ -134,16 +218,29 @@ nav ul li a:hover{
     width: 40vw; 
     cursor: pointer;
 }
+.songList h1{
+    font-size: 50px;
+    color: #28c2e9;
+}
+.songItemContainer{  
+    margin-top: 74px;  
+}
+.songItemContainer h3 a{
 
-.songItemContainer{
-    margin-top: 74px;
+    font-size: 23px;
+    color: rgb(255, 250, 249);
+    text-decoration: none;
+    padding: 5px 5px;
 }
 
 .songItemContainer a:hover{
-    color: rgb(219, 14, 14);
+    background-color: #f2f2f2;
+    color: rgb(8, 8, 8);
 }
 
+
 .songItem{
+
     height: 50px;
     display: flex;
     background-color: white;
@@ -184,4 +281,20 @@ nav ul li a:hover{
     body {
       background-color: red;
     }
+  }
+
+  footer{
+    background: rgb(253, 253, 253);
+    padding: 15px 0px;
+    height: 20px;
+    width: 100%;
+    color: rgb(5, 5, 5);
+    text-align: center;
+  }
+  footer p{
+    font-size: 15px;
+   font-weight: 800;
+  }
+  footer a{
+    color: red;
   }
