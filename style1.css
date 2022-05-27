@@ -142,6 +142,31 @@ nav .menu-btn i{
    background: rgba(25, 23, 23, 0.2);
 }
 
+.container a img{
+  height: 6cm;
+  width: 10cm;
+  border-radius: 30px;
+}
+
+/* @media (min-width: 20em)
+.u-margin-bottom@sm {
+    margin-bottom: 22px!important;
+} */
+
+.o-layout {
+  display: block;
+  font-size: 0;
+  list-style: none;
+  margin: 0 0 0 -22px;
+  padding-left: 22px;
+}
+
+.o-layout a{
+  padding-left: 22px;
+}
+
+
+
 .container1{
     min-height: 72vh;
     background-color: black;
